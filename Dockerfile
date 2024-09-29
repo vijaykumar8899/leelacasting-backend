@@ -24,7 +24,7 @@ FROM openjdk:17-jdk-slim
 EXPOSE 9191
 
 # Copy the JAR file from the build stage
-COPY --from=build /app/target/LeelaCasting-1.jar app.jar
+COPY target/*.jar app.jar
 
 # Run the JAR file
 ENTRYPOINT ["java", "-jar", "app.jar"]
